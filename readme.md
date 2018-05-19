@@ -1,7 +1,9 @@
 ## Ace Attorney JS Client
 
-This is a rewrite of a js client for the game Ace Attorney Online. This is a start at a rewrite, all of the groundwork is here and
+This is a rewrite of a js client for the game Ace Attorney Online. All of the groundwork is here and
 the capability to really make this thing awesome is totally possible.
+
+This is a rewrite of the [original.](https://github.com/stonedDiscord/stonedDiscord.github.io)
 
 ## Install and build
 
