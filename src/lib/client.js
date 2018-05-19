@@ -192,9 +192,8 @@ class Client {
      * @param {MessageEvent} e
      */
     onMessage(e) {
-        let msg = e.data;
         // console.debug(msg);
-        let lines = msg.split("%");
+        let lines = e.data.split("%");
         let args = lines[0].split("#");
         let header = args[0];
         let handler = this.handlers[header];
@@ -606,10 +605,10 @@ class Viewport {
 
 /**
  * Triggered when the Return key is pressed on the out-of-character chat input box.
- * @param {KeyboardEvent} event
+ * @param {KeyboardEvent} e
  */
-export function onOOCEnter(event) {
-    if (event.keyCode == 13) {
+export function onOOCEnter(e) {
+    if (e.keyCode == 13) {
         client.sendOOC(document.getElementById("client_oocinputbox").value);
         document.getElementById("client_oocinputbox").value = "";
     }
@@ -618,10 +617,10 @@ window.onOOCEnter = onOOCEnter;
 
 /**
  * Triggered when the Return key is pressed on the in-character chat input box.
- * @param {KeyboardEvent} event
+ * @param {KeyboardEvent} e
  */
-export function onEnter(event) {
-    if (event.keyCode == 13) {
+export function onEnter(e) {
+    if (e.keyCode == 13) {
         let mychar = client.me();
         let myemo = client.myEmote();
         let ssfxname = "0";
@@ -643,7 +642,6 @@ window.onEnter = onEnter;
 
 /**
  * Triggered when an item on the music list is clicked.
- * @param {MouseEvent} event
  */
 export function musiclist_click() {
     let playtrack = document.getElementById("client_musiclist").value;
@@ -679,7 +677,6 @@ window.changeBlipVolume = changeBlipVolume;
 
 /**
  * Triggered when a character icon is clicked in the character selection menu.
- * @param {MouseEvent} event
  */
 export function changeCharacter() {
     client.sendLeaveRoom();
