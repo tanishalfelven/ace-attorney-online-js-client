@@ -1,4 +1,4 @@
-var IniParser = {
+let IniParser = {
     _regex : {
         _section : /^\s*\[\s*([^\]]*)\s*\]\s*$/,
         _setting   : /^\s*([\w\.\-\_]+)\s*=\s*(.*?)\s*$/,
