@@ -1,0 +1,11 @@
+/* src/view/components/layout.css */
+.mcdd3c7ee3_nav {
+    width: 100%;
+}
+
+body {
+    /* TODO see if there is a better way to do this, probably not since we're service static content */
+    background-image: url("../resources/img/background.png")
+}
+
+/* src/view/server-hub/server-hub.css */
