@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "mithril": "^1.1.6"
+    "commonjs": "0.0.1",
+    "mithril": "^1.1.6",
+    "modular-css-webpack": "^10.0.0"
   },
   "devDependencies": {
     "eslint-config-standard": "^11.0.0",
