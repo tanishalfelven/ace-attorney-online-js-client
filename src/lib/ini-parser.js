@@ -2,14 +2,10 @@ var IniParser = {
     _regex : {
         _section : /^\s*\[\s*([^\]]*)\s*\]\s*$/,
         _setting   : /^\s*([\w\.\-\_]+)\s*=\s*(.*?)\s*$/,
-        _comment : /^\s*;.*$/,
         _line    : /\r\n|\r|\n/
     },
     _splitIntoLines(rawIni) {
         return rawIni.split(this._regex._line);
-    },
-    _isComment(line) {
-        return this._regex._comment.test(line);
     },
     _isSetting(line) {
         return this._regex._setting.test(line);
@@ -25,9 +21,7 @@ var IniParser = {
         let parsedData = {};
         let currentSection = null;
         lines.forEach(((line) => {
-            if (line.length === 0 || this._isComment(line)) {
-                return;
-            } else if (this._isSetting(line)) {
+            if (this._isSetting(line)) {
                 const [,field, value] = line.match(this._regex._setting);
                 if (currentSection) {
                     parsedData[currentSection][field] = value;
