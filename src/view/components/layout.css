@@ -1,8 +1,35 @@
-.nav {
-    width: 100%;
+body {
+    margin: 0;
+    /* TODO see if there is a better way to do this, probably not since we're service static content */
+    background-image: url("../../../../resources/img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-body {
-    /* TODO see if there is a better way to do this, probably not since we're service static content */
-    background-image: url("../../../../resources/img/background.png")
+.nav {
+    height: auto;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: .5em;
+}
+
+.nav a {
+    color: white;
+    font-family: Verdana;
+    font-size: 1.5em;
+    margin: auto;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: gray;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
 }

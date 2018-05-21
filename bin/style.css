@@ -1,11 +1,88 @@
 /* src/view/components/layout.css */
-.mcdd3c7ee3_nav {
-    width: 100%;
+body {
+    margin: 0;
+    /* TODO see if there is a better way to do this, probably not since we're service static content */
+    background-image: url("../resources/img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-body {
-    /* TODO see if there is a better way to do this, probably not since we're service static content */
-    background-image: url("../resources/img/background.png")
+.mcdd3c7ee3_nav {
+    height: auto;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: .5em;
+}
+
+.mcdd3c7ee3_nav a {
+    color: white;
+    font-family: Verdana;
+    font-size: 1.5em;
+    margin: auto;
+    text-decoration: none;
+}
+
+.mcdd3c7ee3_nav a:hover {
+    color: gray;
+}
+
+.mcdd3c7ee3_container {
+    width: 80%;
+    margin: auto;
 }
 
 /* src/view/server-hub/server-hub.css */
+.mc273c7a30_serversContainer {
+    margin: auto;
+    width: auto;
+}
+
+.mc273c7a30_server {
+    width: 60%;
+    margin: auto;
+
+    background-color: black;
+    color: white;
+    padding: 0.3em;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    transition: background-color 0.3s;
+    font-family: Verdana;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.mc273c7a30_serverData {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0;
+}
+
+.mc273c7a30_server:hover {
+    background-color: grey;
+}
+
+.mc273c7a30_serverData div {
+    width: 50%;
+}
+
+.mc273c7a30_description {
+    height: 0;
+    opacity: 0;
+    padding: 0.3em;
+    padding: 0;
+    transition: opacity 0.3s ease-out, height 0.3s;
+    overflow: hidden;
+}
+
+.mc273c7a30_description.mc273c7a30_visible {
+    opacity: 1;
+    height: auto;
+    padding: 0.3em;
+}

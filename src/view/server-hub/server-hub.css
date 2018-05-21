@@ -1,0 +1,50 @@
+.serversContainer {
+    margin: auto;
+    width: auto;
+}
+
+.server {
+    width: 60%;
+    margin: auto;
+
+    background-color: black;
+    color: white;
+    padding: 0.3em;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    transition: background-color 0.3s;
+    font-family: Verdana;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.serverData {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0;
+}
+
+.server:hover {
+    background-color: grey;
+}
+
+.serverData div {
+    width: 50%;
+}
+
+.description {
+    height: 0;
+    opacity: 0;
+    padding: 0.3em;
+    padding: 0;
+    transition: opacity 0.3s ease-out, height 0.3s;
+    overflow: hidden;
+}
+
+.description.visible {
+    opacity: 1;
+    height: auto;
+    padding: 0.3em;
+}
