@@ -1,4 +1,8 @@
 /* src/view/components/layout.css */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body {
     margin: 0;
     /* TODO see if there is a better way to do this, probably not since we're service static content */
@@ -20,7 +24,6 @@ body {
 
 .mcdd3c7ee3_nav a {
     color: white;
-    font-family: Verdana;
     font-size: 1.5em;
     margin: auto;
     text-decoration: none;
@@ -30,12 +33,16 @@ body {
     color: gray;
 }
 
-.mcdd3c7ee3_container {
+.container {
     width: 80%;
     margin: auto;
 }
 
 /* src/view/server-hub/server-hub.css */
+h2 {
+    text-align: center;
+}
+
 .mc273c7a30_serversContainer {
     margin: auto;
     width: auto;
@@ -52,13 +59,24 @@ body {
     margin-bottom: 10px;
 
     transition: background-color 0.3s;
-    font-family: Verdana;
     font-size: 0.8em;
     cursor: pointer;
 }
 
+@media only screen and (max-width: 1000px) {
+    .mc273c7a30_server {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
 .mc273c7a30_serverData {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
     margin: 0;
@@ -70,6 +88,7 @@ body {
 
 .mc273c7a30_serverData div {
     width: 50%;
+    min-width: 250px;
 }
 
 .mc273c7a30_description {

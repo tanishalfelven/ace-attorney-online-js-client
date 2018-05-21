@@ -1,11 +1,12 @@
 {
     "src/view/components/layout.css": {
         "nav": "mcdd3c7ee3_nav",
-        "container": "mcdd3c7ee3_container"
+        "container": "container"
     },
     "src/view/server-hub/server-hub.css": {
         "serversContainer": "mc273c7a30_serversContainer",
         "server": "mc273c7a30_server",
+        "container": "container",
         "serverData": "mc273c7a30_serverData",
         "description": "mc273c7a30_description",
         "visible": "mc273c7a30_visible"

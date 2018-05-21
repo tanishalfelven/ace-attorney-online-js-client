@@ -1,3 +1,7 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body {
     margin: 0;
     /* TODO see if there is a better way to do this, probably not since we're service static content */
@@ -19,7 +23,6 @@ body {
 
 .nav a {
     color: white;
-    font-family: Verdana;
     font-size: 1.5em;
     margin: auto;
     text-decoration: none;
@@ -29,7 +32,7 @@ body {
     color: gray;
 }
 
-.container {
+:global(.container) {
     width: 80%;
     margin: auto;
 }

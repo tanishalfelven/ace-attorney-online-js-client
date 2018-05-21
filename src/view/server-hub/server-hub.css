@@ -1,3 +1,7 @@
+h2 {
+    text-align: center;
+}
+
 .serversContainer {
     margin: auto;
     width: auto;
@@ -14,13 +18,24 @@
     margin-bottom: 10px;
 
     transition: background-color 0.3s;
-    font-family: Verdana;
     font-size: 0.8em;
     cursor: pointer;
 }
 
+@media only screen and (max-width: 1000px) {
+    .server {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    :global(.container) {
+        width: 95%;
+    }
+}
+
 .serverData {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
     margin: 0;
@@ -32,6 +47,7 @@
 
 .serverData div {
     width: 50%;
+    min-width: 250px;
 }
 
 .description {
