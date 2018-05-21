@@ -23,13 +23,17 @@ h2 {
 }
 
 @media only screen and (max-width: 1000px) {
+    :global(.container) {
+        width: 95%;
+    }
+
     .server {
         width: 100%;
         font-size: 1em;
     }
 
-    :global(.container) {
-        width: 95%;
+    .serverData div {
+        min-width: 250px;
     }
 }
 
@@ -47,7 +51,6 @@ h2 {
 
 .serverData div {
     width: 50%;
-    min-width: 250px;
 }
 
 .description {

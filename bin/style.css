@@ -17,6 +17,7 @@ body {
     background-color: black;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     overflow: hidden;
     padding: .5em;
@@ -64,13 +65,17 @@ h2 {
 }
 
 @media only screen and (max-width: 1000px) {
+    .container {
+        width: 95%;
+    }
+
     .mc273c7a30_server {
         width: 100%;
         font-size: 1em;
     }
 
-    .container {
-        width: 95%;
+    .mc273c7a30_serverData div {
+        min-width: 250px;
     }
 }
 
@@ -88,7 +93,6 @@ h2 {
 
 .mc273c7a30_serverData div {
     width: 50%;
-    min-width: 250px;
 }
 
 .mc273c7a30_description {
