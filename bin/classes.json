@@ -4,8 +4,13 @@
         "container": "container"
     },
     "src/view/server-hub/server-hub.css": {
+        "loadingServersList": "mc273c7a30_loadingServersList",
         "serversContainer": "mc273c7a30_serversContainer",
+        "row": "mc273c7a30_row",
         "server": "mc273c7a30_server",
+        "serverStatus": "mc273c7a30_serverStatus",
+        "serverOnline": "mc273c7a30_serverOnline",
+        "serverOffline": "mc273c7a30_serverOffline",
         "container": "container",
         "serverData": "mc273c7a30_serverData",
         "description": "mc273c7a30_description",

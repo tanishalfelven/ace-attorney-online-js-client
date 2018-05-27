@@ -2,13 +2,25 @@ h2 {
     text-align: center;
 }
 
+.loadingServersList {
+    display: block;
+    margin: auto;
+}
+
 .serversContainer {
     margin: auto;
-    width: auto;
+    width: 60%;
+}
+
+.row {
+    width: 100%;
+    margin: auto;
+
+    display: flex;
 }
 
 .server {
-    width: 60%;
+    width: 95%;
     margin: auto;
 
     background-color: black;
@@ -22,12 +34,40 @@ h2 {
     cursor: pointer;
 }
 
+.serverStatus {
+    width: 5%;
+    height: auto;
+}
+
+.serverStatus img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.serverStatus div {
+    margin-top: 20%;
+    margin-left: 30%;
+    width: 40%;
+    padding-bottom: 40%;
+    vertical-align: middle;
+}
+
+.serverOnline {
+    background-color: green;
+}
+
+.serverOffline {
+    background-color: red;
+}
+
 @media only screen and (max-width: 1000px) {
     :global(.container) {
         width: 95%;
     }
 
-    .server {
+    .row {
         width: 100%;
         font-size: 1em;
     }
@@ -50,20 +90,14 @@ h2 {
 }
 
 .serverData div {
-    width: 50%;
+    width: 33%;
 }
 
 .description {
-    height: 0;
-    opacity: 0;
     padding: 0.3em;
-    padding: 0;
-    transition: opacity 0.3s ease-out, height 0.3s;
-    overflow: hidden;
+    display: none;
 }
 
 .description.visible {
-    opacity: 1;
-    height: auto;
-    padding: 0.3em;
+    display: block;
 }

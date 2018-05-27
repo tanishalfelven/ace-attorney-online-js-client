@@ -44,13 +44,25 @@ h2 {
     text-align: center;
 }
 
+.mc273c7a30_loadingServersList {
+    display: block;
+    margin: auto;
+}
+
 .mc273c7a30_serversContainer {
     margin: auto;
-    width: auto;
+    width: 60%;
+}
+
+.mc273c7a30_row {
+    width: 100%;
+    margin: auto;
+
+    display: flex;
 }
 
 .mc273c7a30_server {
-    width: 60%;
+    width: 95%;
     margin: auto;
 
     background-color: black;
@@ -64,12 +76,40 @@ h2 {
     cursor: pointer;
 }
 
+.mc273c7a30_serverStatus {
+    width: 5%;
+    height: auto;
+}
+
+.mc273c7a30_serverStatus img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.mc273c7a30_serverStatus div {
+    margin-top: 20%;
+    margin-left: 30%;
+    width: 40%;
+    padding-bottom: 40%;
+    vertical-align: middle;
+}
+
+.mc273c7a30_serverOnline {
+    background-color: green;
+}
+
+.mc273c7a30_serverOffline {
+    background-color: red;
+}
+
 @media only screen and (max-width: 1000px) {
     .container {
         width: 95%;
     }
 
-    .mc273c7a30_server {
+    .mc273c7a30_row {
         width: 100%;
         font-size: 1em;
     }
@@ -92,20 +132,14 @@ h2 {
 }
 
 .mc273c7a30_serverData div {
-    width: 50%;
+    width: 33%;
 }
 
 .mc273c7a30_description {
-    height: 0;
-    opacity: 0;
     padding: 0.3em;
-    padding: 0;
-    transition: opacity 0.3s ease-out, height 0.3s;
-    overflow: hidden;
+    display: none;
 }
 
 .mc273c7a30_description.mc273c7a30_visible {
-    opacity: 1;
-    height: auto;
-    padding: 0.3em;
+    display: block;
 }
