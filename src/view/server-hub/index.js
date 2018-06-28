@@ -2,7 +2,7 @@ import css from "./index.css";
 import m from "mithril";
 import MasterServer from "../../lib/MasterServer";
 
-let ServerHub = {
+export default {
     oninit : (vnode) => {
         vnode.state.serverList = [];
         vnode.state.masterServer = new MasterServer("ws://master.aceattorneyonline.com:27014",
@@ -57,4 +57,3 @@ let ServerHub = {
         ];
     }
 };
-export default ServerHub;

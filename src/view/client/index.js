@@ -1,8 +1,7 @@
 import m from "mithril";
 
-let Client = {
+export default {
     view : () => {
         return m("h2", "The client");
     }
 };
-export default Client;

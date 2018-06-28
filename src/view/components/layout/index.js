@@ -1,7 +1,7 @@
 import m from "mithril";
 import css from "./index.css";
 
-let Layout = {
+export default {
     view : (vnode) => {
         return [m("div", { class : css.nav },  [
             m("a", { href : "https://aceattorneyonline.com/" }, "Ace Attorney Online"),
@@ -10,4 +10,3 @@ let Layout = {
         m("div", { class : css.container }, [vnode.children])];
     }
 };
-export default Layout;
