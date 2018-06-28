@@ -1,4 +1,4 @@
-/* src/view/components/layout.css */
+/* src/view/components/layout/index.css */
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.mcdd3c7ee3_nav {
+.mcd4e7dbfc_nav {
     height: auto;
     background-color: black;
     width: 100%;
@@ -23,14 +23,14 @@ body {
     padding: .5em;
 }
 
-.mcdd3c7ee3_nav a {
+.mcd4e7dbfc_nav a {
     color: white;
     font-size: 1.5em;
     margin: auto;
     text-decoration: none;
 }
 
-.mcdd3c7ee3_nav a:hover {
+.mcd4e7dbfc_nav a:hover {
     color: gray;
 }
 
@@ -39,29 +39,29 @@ body {
     margin: auto;
 }
 
-/* src/view/server-hub/server-hub.css */
+/* src/view/server-hub/index.css */
 h2 {
     text-align: center;
 }
 
-.mc273c7a30_loadingServersList {
+.mc079b5ee1_loadingServersList {
     display: block;
     margin: auto;
 }
 
-.mc273c7a30_serversContainer {
+.mc079b5ee1_serversContainer {
     margin: auto;
     width: 60%;
 }
 
-.mc273c7a30_row {
+.mc079b5ee1_row {
     width: 100%;
     margin: auto;
 
     display: flex;
 }
 
-.mc273c7a30_server {
+.mc079b5ee1_server {
     width: 95%;
     margin: auto;
 
@@ -76,19 +76,19 @@ h2 {
     cursor: pointer;
 }
 
-.mc273c7a30_serverStatus {
+.mc079b5ee1_serverStatus {
     width: 5%;
     height: auto;
 }
 
-.mc273c7a30_serverStatus img {
+.mc079b5ee1_serverStatus img {
     width: 100%;
     display: block;
     margin: 0;
     padding: 0;
 }
 
-.mc273c7a30_serverStatus div {
+.mc079b5ee1_serverStatus div {
     margin-top: 20%;
     margin-left: 30%;
     width: 40%;
@@ -96,11 +96,11 @@ h2 {
     vertical-align: middle;
 }
 
-.mc273c7a30_serverOnline {
+.mc079b5ee1_serverOnline {
     background-color: green;
 }
 
-.mc273c7a30_serverOffline {
+.mc079b5ee1_serverOffline {
     background-color: red;
 }
 
@@ -109,17 +109,18 @@ h2 {
         width: 95%;
     }
 
-    .mc273c7a30_row {
+    .mc079b5ee1_row {
         width: 100%;
         font-size: 1em;
     }
 
-    .mc273c7a30_serverData div {
-        min-width: 250px;
+    .mc079b5ee1_serverData div {
+        word-wrap: break-word;
+        width: auto;
     }
 }
 
-.mc273c7a30_serverData {
+.mc079b5ee1_serverData {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -127,19 +128,20 @@ h2 {
     margin: 0;
 }
 
-.mc273c7a30_server:hover {
+.mc079b5ee1_server:hover {
     background-color: grey;
 }
 
-.mc273c7a30_serverData div {
+.mc079b5ee1_serverData div {
     width: 33%;
 }
 
-.mc273c7a30_description {
+.mc079b5ee1_description {
     padding: 0.3em;
     display: none;
+    word-wrap: break-word;
 }
 
-.mc273c7a30_description.mc273c7a30_visible {
+.mc079b5ee1_description.mc079b5ee1_visible {
     display: block;
 }

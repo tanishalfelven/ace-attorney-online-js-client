@@ -1,0 +1,19 @@
+{
+    "src/view/components/layout/index.css": {
+        "nav": "mcd4e7dbfc_nav",
+        "container": "container"
+    },
+    "src/view/server-hub/index.css": {
+        "loadingServersList": "mc079b5ee1_loadingServersList",
+        "serversContainer": "mc079b5ee1_serversContainer",
+        "row": "mc079b5ee1_row",
+        "server": "mc079b5ee1_server",
+        "serverStatus": "mc079b5ee1_serverStatus",
+        "serverOnline": "mc079b5ee1_serverOnline",
+        "serverOffline": "mc079b5ee1_serverOffline",
+        "container": "container",
+        "serverData": "mc079b5ee1_serverData",
+        "description": "mc079b5ee1_description",
+        "visible": "mc079b5ee1_visible"
+    }
+}

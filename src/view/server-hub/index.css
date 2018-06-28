@@ -73,7 +73,8 @@ h2 {
     }
 
     .serverData div {
-        min-width: 250px;
+        word-wrap: break-word;
+        width: auto;
     }
 }
 
@@ -96,6 +97,7 @@ h2 {
 .description {
     padding: 0.3em;
     display: none;
+    word-wrap: break-word;
 }
 
 .description.visible {

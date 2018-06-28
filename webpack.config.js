@@ -1,12 +1,10 @@
-var path = require("path"),
-    
-    CSSPlugin = require("modular-css-webpack/plugin");
+const CSSPlugin = require("modular-css-webpack/plugin");
  
 module.exports = {
-    entry   : "./src/routes.js",
+    entry   : "./src/index.js",
     output  : {
-        "path"     : "./bin",
-        "filename" : "app.js"
+        "path"     : "./gen",
+        "filename" : "index.js"
     },
     module : {
         rules : [{

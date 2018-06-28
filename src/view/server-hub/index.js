@@ -1,11 +1,11 @@
-import css from "./server-hub.css";
+import css from "./index.css";
 import m from "mithril";
-import MasterServer from "../../lib/master-server";
+import MasterServer from "../../lib/MasterServer";
 
 let ServerHub = {
     oninit : (vnode) => {
         vnode.state.serverList = [];
-        MasterServer.init("ws://master.aceattorneyonline.com:27016",
+        vnode.state.masterServer = new MasterServer("ws://master.aceattorneyonline.com:27014",
             // When data for server is received
             (serverData) => {
                 vnode.state.serverList.push(serverData);
@@ -32,21 +32,10 @@ let ServerHub = {
             vnode.state.serverList.length <= 0 ?
                 m("img", { class : css.loadingServersList, src : "./resources/img/spinner.gif" })
                 :
-                m("div", { class : css.serversContainer}, [vnode.state.serverList && Array.from(vnode.state.serverList).sort((a, b) => {
-                    // TODO fix this
-                    // TODO figure out a way for this not to be so ugly
-                    if (a.isOnline !== null && b.isOnline !== null) {
-                        if      (a.isOnline && !b.isOnline) return -1;
-                        else if (!a.isOnline && b.isOnline) return 1;
-                        if (a.isOnline && b.isOnline) {
-                            if (a.online / a.max > b.online / b.max) return -1;
-                            else return 1;
-                        }
-                    } else {
-                        if      (a.isStatusLoaded && !b.isStatusLoaded) return -1;
-                        else if (!a.isStatusLoaded && b.isStatusLoaded) return 1;
-                        else return 0;
-                    }
+                m("div", { class : css.serversContainer}, [...vnode.state.serverList].sort((a, b) => {
+                    if (a.isStatusLoaded && a.isOnline) return -1;
+                    if (b.isStatusLoaded && b.isOnline) return 1;
+                    return 0;
                 }).map((e) => {
                     return m("div", { class : css.row }, [
                         m("div", { class : css.serverStatus }, 
@@ -58,13 +47,13 @@ let ServerHub = {
                         m("div", { class : css.server, onclick : vnode.state.toggleDescription }, [
                             m("div", { class : css.serverData }, [
                                 m("div", { class : css.address }, `${e.address}:${e.port}`),
-                                m("div", { class : css.playerCount },e.isStatusLoaded && e.isOnline ? `${e.online} / ${e.max}` : null),
+                                m("div", { class : css.playerCount },e.online && e.max ? `${e.online} / ${e.max}` : null),
                                 m("div", { class : css.name}, e.name)
                             ]),
                             m("div", { class : css.description }, e.description)
                         ])
                     ]);
-                })])
+                }))
         ];
     }
 };

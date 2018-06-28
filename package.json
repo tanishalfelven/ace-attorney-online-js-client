@@ -19,7 +19,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack src/routes.js --output bin/app.js -d --watch",
+    "start": "webpack src/routes.js --output gen/index.js -d --watch",
     "eslint": "C:\\Users\\tanis\\AppData\\Roaming\\npm\\eslint"
   },
   "keywords": [],

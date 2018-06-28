@@ -5,7 +5,7 @@
 body {
     margin: 0;
     /* TODO see if there is a better way to do this, probably not since we're service static content */
-    background-image: url("../../../../resources/img/background.png");
+    background-image: url("../../../../../resources/img/background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

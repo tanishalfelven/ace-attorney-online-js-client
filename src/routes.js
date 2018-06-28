@@ -1,7 +1,7 @@
 import m from "mithril";
 import Layout from "./view/components/layout";
-import Client from "./view/client/client";
-import ServerHub from "./view/server-hub/server-hub";
+import Client from "./view/client";
+import ServerHub from "./view/server-hub";
 
 m.route(document.body, "/", {
     "/": {

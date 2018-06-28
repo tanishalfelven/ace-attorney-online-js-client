@@ -1,5 +1,5 @@
 import m from "mithril";
-import css from "./layout.css";
+import css from "./index.css";
 
 let Layout = {
     view : (vnode) => {
